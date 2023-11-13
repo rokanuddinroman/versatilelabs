@@ -85,7 +85,10 @@ export function MyCards() {
             {ALLCARDS.filter(
               (cardCategory) => cardCategory.category === selectedTab
             ).map((card) => (
-              <div key={card.title} className="bg-[#191919] rounded-[8px]">
+              <div
+                key={card.title}
+                className="bg-[#1A1A1A] border border-[#242424] rounded-[8px]"
+              >
                 <Link href={`/${card.category}/${card.slug}`}>
                   <div
                     style={{
