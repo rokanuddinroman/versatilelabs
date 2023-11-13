@@ -67,20 +67,25 @@ export function MyCards() {
       <Tabs defaultValue="Templates" className="w-full">
         <TabsList className="flex items-center gap-4">
           {uniqueCategories?.map((card) => (
-            <TabsTrigger value={card} onClick={() => setSelectedTab(card)}>
+            <TabsTrigger
+              key={card}
+              value={card}
+              onClick={() => setSelectedTab(card)}
+            >
               {card}
             </TabsTrigger>
           ))}
         </TabsList>
         {uniqueCategories.map((category) => (
           <TabsContent
+            key={category}
             value={category}
             className="grid grid-cols-1 gap-[20px] md:grid-cols-3"
           >
             {ALLCARDS.filter(
               (cardCategory) => cardCategory.category === selectedTab
             ).map((card) => (
-              <div className="bg-[#191919] rounded-[8px]">
+              <div key={card.title} className="bg-[#191919] rounded-[8px]">
                 <Link href={`/${card.category}/${card.slug}`}>
                   <div
                     style={{
