@@ -7,17 +7,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowElbowUpLeft } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 function ProductPage() {
+  const pathname = usePathname();
+  const category = pathname.split("/")[1];
   return (
     <div>
       <TopBar />
       <Navbar />
       <div className="max-w-screen-xl mx-auto px-[16px] border-x border-b border-[#363636]">
-        <Link href="" className="inline-flex items-center gap-1 h-[60px]">
+        <Link
+          href={`/${category}`}
+          className="inline-flex items-center gap-1 h-[60px]"
+        >
           <ArrowElbowUpLeft size={20} color="#ffffff" weight="bold" />
-          <p>Category</p>
+          <p>{category}</p>
         </Link>
       </div>
       <div

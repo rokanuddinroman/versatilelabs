@@ -1,9 +1,51 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import Image from "next/image";
+// import "/api/subscribe";
 
 export const HeroSection = () => {
+  const [emailInput, setEmailInput] = useState("");
+  const [buttonLoading, setButtonLoading] = useState(false);
+  const handleFormSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    if (!emailInput) {
+      // return toast({
+      //   description: 'Email is required',
+      //   status: 'error'
+      // });
+      alert("Email is required");
+    }
+    setButtonLoading(true);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        body: JSON.stringify({ email: emailInput }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        //  toast({
+        //   title: 'Joined successfully.',
+        //   description: "Thank you for joining the waitlist!",
+        //   status: 'success'
+        // });
+        alert("Joined successfully.");
+      } else {
+        throw new Error(
+          data?.error || "Something went wrong, please try again later"
+        );
+      }
+    } catch (e) {
+      //  toast({
+      //    description: (e as Error).message,
+      //    status: 'error'
+      //  });
+      alert((e as Error).message);
+    }
+    setEmailInput("");
+    setButtonLoading(false);
+  };
   return (
     <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative">
       <div className="hero-light-effect"></div>
@@ -30,9 +72,22 @@ export const HeroSection = () => {
           Join the innovation journey! Subscribe to my newsletter for a
           front-row seat to the latest in code, design, and creativity.
         </p>
-        <form className="flex items-cente gap-2 justify-center pt-[34px]">
-          <Input className="w-[432px]" placeholder="your email" />
-          <Button className="h-[40px] w-[184px] rounded-[4px] text-[14px] font-[500]">
+        <form
+          onSubmit={handleFormSubmit}
+          className="flex items-cente gap-2 justify-center pt-[34px]"
+        >
+          <Input
+            className="w-[432px]"
+            placeholder="your email"
+            type="email"
+            value={emailInput}
+            onChange={(e) => setEmailInput(e.target.value)}
+            required
+          />
+          <Button
+            type="submit"
+            className="h-[40px] w-[184px] rounded-[4px] text-[14px] font-[500]"
+          >
             Subscribe for 0$
           </Button>
         </form>

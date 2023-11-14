@@ -1,52 +1,13 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import useCards from "@/hooks/useCards";
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const ALLCARDS = [
-  {
-    category: "Templates",
-    title: "Linkup v1.0 - Linktree Alternative",
-    slug: "linkup-linktree-alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
-    isFree: false,
-    price: "49",
-  },
-  {
-    category: "Templates",
-    title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
-    slug: "linkup-linktree-alternative-2",
-    isFree: true,
-    price: "49",
-  },
-  {
-    category: "Templates",
-    title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
-    slug: "linkup-linktree-alternative-3",
-    isFree: false,
-    price: "49",
-  },
-  {
-    category: "Products",
-    title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
-    slug: "linkup-linktree-alternative-4",
-    isFree: true,
-    price: "49",
-  },
-  {
-    category: "Resources",
-    title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
-    slug: "linkup-linktree-alternative-5",
-    isFree: false,
-    price: "49",
-  },
-];
+const { myCards } = useCards();
+const ALLCARDS = myCards;
 
 const allCategories = ALLCARDS.map((card) => card.category);
 
@@ -114,8 +75,12 @@ export function MyCards() {
                 </div>
                 <div className="p-4 border-t border-[#363636] flex items-center justify-between">
                   <div className="flex items-center">
-                    <p className="text-[20px] font-[700]">
-                      {card.isFree ? "FREE" : card.price}
+                    <p
+                      className={`text-[20px] font-[700] ${
+                        card.isFree && "text-[#E73621]"
+                      }`}
+                    >
+                      {card.isFree ? "Free" : card.price}
                     </p>
                     <sup className="text-[10px] pl-[1px]">
                       {!card.isFree && "USD"}

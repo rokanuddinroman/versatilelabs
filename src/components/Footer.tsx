@@ -17,8 +17,8 @@ const Footer = () => {
   });
   return (
     <div className="bg-[#E73521] text-[#131317]">
-      <div className="max-w-screen-xl mx-auto p4-16 px-[16px] border-x border-[#131317] flex justify-between items-center">
-        <p style={{ fontSize: "80px" }}>{bangladeshTime}</p>
+      <div className="max-w-screen-xl mx-auto p-4 px-[16px] border-x border-[#131317] flex justify-between items-center">
+        <p style={{ fontSize: "120px" }}>{bangladeshTime}</p>
         <div className="flex flex-col">
           <Link href="">Home</Link>
           <Link href="">Templates</Link>

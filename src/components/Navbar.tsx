@@ -6,7 +6,7 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <nav className="h-[80px] border-b border-[#363636] sticky top-0 backdrop-blur-[20px]">
+    <nav className="h-[80px] border-b border-[#363636] sticky top-0 backdrop-blur-[20px] z-10 bg-[#161616be]">
       <div
         style={{
           height: "80px",
@@ -33,6 +33,12 @@ export const Navbar = () => {
         </Link>
         <div>
           {/* <ToggleRight size={32} color="#ffffff" weight="fill" /> */}
+          <span className="text-[13px] font-[500] flex items-center gap-2">
+            search
+            <div className="h-[25px] w-[25px] rounded-[4px] bg-[hsla(0,0%,100%,.1)] text-[hsla(0,0%,100%,.6)] font-[600] text-[11px] flex items-center justify-center">
+              ⌘J
+            </div>
+          </span>
         </div>
       </div>
     </nav>
