@@ -108,7 +108,7 @@ export function MyCards() {
                   <span className="text-[12px] text-gray-400">
                     {card.category}
                   </span>
-                  <p className="text-[20px] font-[600] leading-[24px] pt-2">
+                  <p className="text-[20px] font-[600] leading-[24px] pt-2 text-[#EDEDED]">
                     {card.title}
                   </p>
                 </div>

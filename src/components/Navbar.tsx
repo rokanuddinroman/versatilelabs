@@ -6,7 +6,7 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <nav className="h-[80px] border-b border-[#363636]">
+    <nav className="h-[80px] border-b border-[#363636] sticky top-0 backdrop-blur-[20px]">
       <div
         style={{
           height: "80px",

@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { House, MagnifyingGlass } from "@phosphor-icons/react";
+import { House, MagnifyingGlass, RocketLaunch } from "@phosphor-icons/react";
 import Link from "next/link";
+// import "../app/shine.css";
 
 export const Dock = () => {
   return (
@@ -71,6 +72,29 @@ export const Dock = () => {
             }}
           >
             <MagnifyingGlass
+              size={40}
+              color="#ffffff"
+              weight="duotone"
+              style={{ opacity: "0.2" }}
+            />
+          </div>
+        </Link>
+        <Link href="#">
+          <div
+            className="iosRounded dock-icon btn btn-anim"
+            style={{
+              width: "60px",
+              height: "60px",
+              borderRadius: "10px",
+              filter:
+                "drop-shadow(0px 5.606438636779785px 5.606438636779785px rgba(0, 0, 0, 0.17)) drop-shadow(0px 16.819316864013672px 39.24507141113281px rgba(0, 0, 0, 0.10))",
+              transition: "0.2s",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <RocketLaunch
               size={40}
               color="#ffffff"
               weight="duotone"

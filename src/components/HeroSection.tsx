@@ -5,7 +5,8 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px]">
+    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative">
+      <div className="hero-light-effect"></div>
       <div
         style={{
           paddingTop: "112px",
@@ -15,20 +16,26 @@ export const HeroSection = () => {
           textAlign: "center",
         }}
       >
-        <h1 className="text-[40px] font-semibold text-[#f6f6f6]">
-          Design <span className="text-[#FF4800]">→</span> Code. Create. Repeat.
-          Crafting Digital Brilliance, Simplified.
+        <h1
+          className="text-[40px] font-semibold text-[#f6f6f6] image-text"
+          style={{
+            backgroundImage:
+              "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
+          }}
+        >
+          Design <span className="text-[#FF4800]">→ </span> Code. Create.
+          Repeat. Crafting Digital Brilliance, Simplified.
         </h1>
         <p className="text-[16px] text-[#f6f6f6] pt-[24px]">
           Join the innovation journey! Subscribe to my newsletter for a
           front-row seat to the latest in code, design, and creativity.
         </p>
-        <div className="flex items-center gap-2 justify-center pt-[34px]">
-          <Input className="w-[432px]" type="email" placeholder="your email" />
+        <form className="flex items-cente gap-2 justify-center pt-[34px]">
+          <Input className="w-[432px]" placeholder="your email" />
           <Button className="h-[40px] w-[184px] rounded-[4px] text-[14px] font-[500]">
-            Get Updates
+            Subscribe for 0$
           </Button>
-        </div>
+        </form>
         <div className="flex items-center gap-2 justify-center mt-8">
           <div className="flex -space-x-4 rtl:space-x-reverse">
             <Image

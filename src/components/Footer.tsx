@@ -9,9 +9,22 @@ import {
 } from "@phosphor-icons/react";
 
 const Footer = () => {
+  let bangladeshTime = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Asia/Dhaka",
+    hourCycle: "h24",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   return (
     <div className="bg-[#E73521] text-[#131317]">
-      <div className="max-w-screen-xl mx-auto py-16 px-[16px] border-x border-[#131317]"></div>
+      <div className="max-w-screen-xl mx-auto p4-16 px-[16px] border-x border-[#131317] flex justify-between items-center">
+        <p style={{ fontSize: "80px" }}>{bangladeshTime}</p>
+        <div className="flex flex-col">
+          <Link href="">Home</Link>
+          <Link href="">Templates</Link>
+          <Link href="">Work</Link>
+        </div>
+      </div>
       <div className="h-[80px] border-t border-[#131317]">
         <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#131317] h-[100%] flex items-center justify-between">
           <p>Made by Rokan | ©2023 Rokan.tech</p>
