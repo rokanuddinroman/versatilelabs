@@ -2,11 +2,10 @@
 import { Dock } from "@/components/Dock";
 import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import Head from "next/head";
 import Script from "next/script";
 import React from "react";
 
-export const WorkPage = () => {
+const WorkPage = () => {
   return (
     <div>
       <Navbar />
