@@ -3,6 +3,7 @@ import { Dock } from "@/components/Dock";
 import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import Head from "next/head";
+import Script from "next/script";
 import React from "react";
 
 export const WorkPage = () => {
@@ -12,9 +13,6 @@ export const WorkPage = () => {
   // }
   return (
     <body>
-      <Head>
-        <script src="https://tally.so/widgets/embed.js"></script>
-      </Head>
       <Navbar />
       <div className="max-w-screen-xl mx-auto  border-x border-[#363636] pb-[100px] relative">
         <iframe
@@ -27,7 +25,7 @@ export const WorkPage = () => {
           marginWidth={0}
           title="Let's work together 🚀"
         ></iframe>
-        <script async src="https://tally.so/widgets/embed.js"></script>
+        <Script src="https://tally.so/widgets/embed.js" async></Script>
       </div>
       <Footer />
       <Dock />
