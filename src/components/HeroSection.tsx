@@ -74,10 +74,10 @@ export const HeroSection = () => {
         </p>
         <form
           onSubmit={handleFormSubmit}
-          className="flex items-cente gap-2 justify-center pt-[34px]"
+          className="flex items-center flex-col gap-2 justify-center pt-[34px] md:flex-row"
         >
           <Input
-            className="w-[432px]"
+            className="w-full md:w-[432px]"
             placeholder="your email"
             type="email"
             value={emailInput}
@@ -86,7 +86,7 @@ export const HeroSection = () => {
           />
           <Button
             type="submit"
-            className="h-[40px] w-[184px] rounded-[4px] text-[14px] font-[500]"
+            className="w-full h-[40px] md:w-[184px] rounded-[4px] text-[14px] font-[500]"
           >
             Subscribe for 0$
           </Button>
