@@ -7,6 +7,7 @@ import { Search } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "./button";
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -39,8 +40,10 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
->(({ className, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input> & {
+    handleButton?: (e: { preventDefault: () => void }) => void;
+  }
+>(({ className, handleButton, ...props }, ref) => (
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
@@ -51,6 +54,12 @@ const CommandInput = React.forwardRef<
       )}
       {...props}
     />
+    <Button
+      className="h-[30px] bg-[hsla(0,0%,100%,.1)] text-[#fff] text-[14px] hover:text-[#000]"
+      onClick={handleButton}
+    >
+      Search
+    </Button>
   </div>
 ));
 

@@ -12,14 +12,14 @@ import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
 
 function CategoryPage() {
-  const searchParams = useSearchParams();
   const pathname = usePathname();
-  const search = searchParams.get("search");
+  const searchParams = useSearchParams();
+  const search = searchParams.get("q");
   const { myCards } = useCards();
 
-  const searchedCards = myCards.filter(
-    (cards) => cards.category.toLowerCase() === pathname.slice(1)
-  );
+  const searchedCards = myCards.filter((cards) => {
+    return search && cards.title.includes(search.toString());
+  });
 
   return (
     <div
@@ -37,7 +37,7 @@ function CategoryPage() {
         </div>
         <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative py-4 pb-[50px]">
           <div className="flex gap-2 mb-4">
-            <h2 className="text-[36px] capitalize">{pathname.slice(1)}</h2>
+            <h2 className="text-[36px]">Search for {search}</h2>
             <p className="text-[12px] text-gray-400">
               {searchedCards.length} items
             </p>
@@ -102,7 +102,7 @@ function CategoryPage() {
             <div className="flex items-center justify-center gap-4 flex-col w-full h-[300px]">
               <p>
                 Apologies, but there are currently no items available in this
-                category.
+                search.
               </p>
               <Link href="/">
                 <Button>Return to home</Button>

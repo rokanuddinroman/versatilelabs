@@ -99,7 +99,7 @@ export function MyCards() {
 
         <div className="flex justify-center mt-8">
           <Link
-            href={`/${selectedTab}`}
+            href={`/${selectedTab.toLowerCase()}`}
             className="font-[500] border-b-2 border-white flex text-center pb-1 gap-1 items-center"
           >
             View all {selectedTab}

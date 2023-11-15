@@ -1,18 +1,34 @@
 "use client";
 import React from "react";
-import { House, MagnifyingGlass, RocketLaunch } from "@phosphor-icons/react";
+import {
+  Briefcase,
+  House,
+  MagnifyingGlass,
+  Notebook,
+  RocketLaunch,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import { SearchDialog } from "./SearchDialog";
 import "../app/shine.css";
+import { useRouter } from "next/navigation";
 
 export const Dock = () => {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
+      }
+      if (e.key === "p" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        router.push("/Templates");
+      }
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        router.push("/Work");
       }
     };
 
@@ -95,7 +111,30 @@ export const Dock = () => {
               style={{ opacity: "0.2" }}
             />
           </div>
-          <Link href="#">
+          <Link href="/blogs">
+            <div
+              className="iosRounded dock-icon"
+              style={{
+                width: "60px",
+                height: "60px",
+                borderRadius: "10px",
+                filter:
+                  "drop-shadow(0px 5.606438636779785px 5.606438636779785px rgba(0, 0, 0, 0.17)) drop-shadow(0px 16.819316864013672px 39.24507141113281px rgba(0, 0, 0, 0.10))",
+                transition: "0.2s",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Notebook
+                size={40}
+                color="#ffffff"
+                weight="duotone"
+                style={{ opacity: "0.2" }}
+              />
+            </div>
+          </Link>
+          <Link href="/work">
             <div
               className="iosRounded dock-icon btn btn-anim"
               style={{
@@ -110,7 +149,7 @@ export const Dock = () => {
                 justifyContent: "center",
               }}
             >
-              <RocketLaunch
+              <Briefcase
                 size={40}
                 color="#ffffff"
                 weight="duotone"
