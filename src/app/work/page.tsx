@@ -7,14 +7,10 @@ import Script from "next/script";
 import React from "react";
 
 export const WorkPage = () => {
-  //   Tally.loadEmbeds();
-  // if (Tally) {
-  //   Tally.loadEmbeds();
-  // }
   return (
-    <body>
+    <div>
       <Navbar />
-      <div className="max-w-screen-xl mx-auto  border-x border-[#363636] pb-[100px] relative">
+      <div className="max-w-screen-xl mx-auto border-x border-[#363636] pb-[100px] relative">
         <iframe
           data-tally-src="https://tally.so/embed/3NXMgp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           loading="eager"
@@ -25,11 +21,11 @@ export const WorkPage = () => {
           marginWidth={0}
           title="Let's work together 🚀"
         ></iframe>
-        <Script src="https://tally.so/widgets/embed.js" async></Script>
+        <Script src="https://tally.so/widgets/embed.js"></Script>
       </div>
       <Footer />
       <Dock />
-    </body>
+    </div>
   );
 };
 
