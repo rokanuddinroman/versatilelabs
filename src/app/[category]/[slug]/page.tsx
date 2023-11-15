@@ -27,10 +27,10 @@ function ProductPage() {
         </Link>
       </div>
       <div
-        className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative"
-        style={{ display: "grid", gridTemplateColumns: "450px 1fr" }}
+        className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative grid 
+        grid-cols-1 lg:grid-cols-[450px,1fr] pb-8"
       >
-        <div className="border-r border-[#363636] py-4 pr-4 sticky top-0">
+        <div className="lg:border-r border-[#363636] py-4 lg:pr-4 lg:sticky top-0">
           <h2 className="text-[36px] font-[700] leading-[42px] text-[#ededed] py-8">
             Linkup V1 Framer Template
           </h2>
@@ -52,7 +52,7 @@ function ProductPage() {
             </div>
           </div>
         </div>
-        <div className=" py-4 pl-4">
+        <div className=" lg:py-4 lg:pl-4">
           <div
             style={{
               aspectRatio: "4/3",
