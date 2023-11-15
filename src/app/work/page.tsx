@@ -21,6 +21,17 @@ const WorkPage = () => {
           title="Let's work together 🚀"
         ></iframe>
         <Script src="https://tally.so/widgets/embed.js"></Script>
+        {/* <div className="inline-flex items-center justify-center w-full">
+          <hr className="w-64 h-px my-8 bg-[#D8D8D8] border-0 " />
+          <span className="absolute px-3 font-medium text-[#D8D8D8] -translate-x-1/2 bg-[#161616] left-1/2 dark:text-white dark:bg-gray-900">
+            or
+          </span>
+        </div>
+        <div className="flex items-center justify-center py-20">
+          <button className="text-[50px] font-[500] px-[100px] py-[50px] border-2 border-[#F7F7F7] rounded-full">
+            Book a Call
+          </button>
+        </div> */}
       </div>
       <Footer />
       <Dock />

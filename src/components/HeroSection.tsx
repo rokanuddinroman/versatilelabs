@@ -1,18 +1,56 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import NewsLetter from "./Newsletter";
+import { useToast } from "./ui/use-toast";
+import { ToastAction } from "./ui/toast";
+import { MembersSuccessResponse } from "@/app/types/Newsletter";
+import Confetti from "react-confetti";
 
 export const HeroSection = () => {
+  const [email, setEmail] = useState("");
+  const [successMessage, setSuccessMessage] =
+    useState<MembersSuccessResponse>();
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isMember, setIsMember] = useState("");
+
+  const handleEmailSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/addSubscription", {
+      body: JSON.stringify({ email }),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    });
+    const data = await res.json();
+
+    setIsMember(data?.res?.title);
+
+    console.log(data.error);
+
+    if (data.error) {
+      setErrorMessage("Hey, you are already subscribed!");
+      setSuccessMessage(undefined);
+      return;
+    }
+
+    setSuccessMessage(data.res);
+    setErrorMessage("");
+  };
+
+  const dismissMessages = () => {
+    setSuccessMessage(undefined);
+    setErrorMessage("");
+  };
+
+  const { toast } = useToast();
   return (
     <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative">
       <div className="hero-light-effect"></div>
       <div
         style={{
           paddingTop: "112px",
-          paddingBottom: "56px",
           maxWidth: "48rem",
           marginInline: "auto",
           textAlign: "center",
@@ -32,56 +70,69 @@ export const HeroSection = () => {
           Join the innovation journey! Subscribe to my newsletter for a
           front-row seat to the latest in code, design, and creativity.
         </p>
-        <form className="flex items-center flex-col gap-2 justify-center pt-[34px] md:flex-row">
+        <form
+          onSubmit={handleEmailSubmit}
+          className="flex items-center flex-col gap-2 justify-center pt-[34px] md:flex-row"
+        >
           <Input
             className="w-full md:w-[432px]"
             placeholder="your email"
             type="email"
-            id="email-input"
-            name="email"
             required
             autoCapitalize="off"
             autoCorrect="off"
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Button
             type="submit"
             className="w-full h-[40px] md:w-[184px] rounded-[4px] text-[14px] font-[500]"
+            onClick={() => {
+              // successMessage &&
+              toast({
+                title: "Yay! 🥳",
+                description: successMessage
+                  ? `We have added ${successMessage.email_address} to our waitlist. We will let you know when we launch!`
+                  : "You are already added to our waitlist. We will let you know when we launch!",
+              });
+
+              setSuccessMessage(undefined);
+            }}
           >
             Subscribe for 0$
           </Button>
         </form>
-        <div className="flex items-center gap-2 justify-center mt-8">
-          <div className="flex -space-x-4 rtl:space-x-reverse">
-            <Image
-              className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
-              src="/assets/pfp.jpg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <Image
-              className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
-              src="/assets/pfp.jpg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <Image
-              className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
-              src="/assets/pfp.jpg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <a
-              className="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-[#757575] border-2 border-[#2a2a2a] rounded-full hover:bg-[#373737] dark:border-gray-800"
-              href="#"
-            >
-              +99
-            </a>
-          </div>
-          <p>120+ others subscribed</p>
+      </div>
+      <div className="flex items-center gap-2 justify-center mt-8">
+        <div className="flex -space-x-4 rtl:space-x-reverse">
+          <Image
+            className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
+            src="/assets/pfp.jpg"
+            alt=""
+            width={32}
+            height={32}
+          />
+          <Image
+            className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
+            src="/assets/pfp.jpg"
+            alt=""
+            width={32}
+            height={32}
+          />
+          <Image
+            className=" border-2 border-[#2a2a2a] rounded-full dark:border-gray-800"
+            src="/assets/pfp.jpg"
+            alt=""
+            width={32}
+            height={32}
+          />
+          <a
+            className="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-[#757575] border-2 border-[#2a2a2a] rounded-full hover:bg-[#373737] dark:border-gray-800"
+            href="#"
+          >
+            +99
+          </a>
         </div>
+        <p>120+ others subscribed</p>
       </div>
     </div>
   );
