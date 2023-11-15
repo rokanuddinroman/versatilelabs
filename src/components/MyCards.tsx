@@ -6,23 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const { myCards } = useCards();
-const ALLCARDS = myCards;
-
-const allCategories = ALLCARDS.map((card) => card.category);
-
-function onlyUnique(value: any, index: any, array: string | any[]) {
-  return array.indexOf(value) === index;
-}
-
-const uniqueCategories = allCategories.filter(onlyUnique);
-
-console.log(uniqueCategories);
-
 export function MyCards() {
+  const { myCards } = useCards();
+  const ALLCARDS = myCards;
+
+  const allCategories = ALLCARDS.map((card) => card.category);
+
+  function onlyUnique(value: any, index: any, array: string | any[]) {
+    return array.indexOf(value) === index;
+  }
+
+  const uniqueCategories = allCategories.filter(onlyUnique);
   const [selectedTab, setSelectedTab] = useState("Templates");
   const haha = ALLCARDS.filter((category) => category.category === selectedTab);
-  console.log(haha);
   return (
     <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-8">
       <Tabs defaultValue="Templates" className="w-full">
