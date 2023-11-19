@@ -46,7 +46,7 @@ export const HeroSection = () => {
 
   const { toast } = useToast();
   return (
-    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative">
+    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative overflow-hidden">
       <div className="hero-light-effect"></div>
       <div
         style={{
@@ -55,10 +55,9 @@ export const HeroSection = () => {
           marginInline: "auto",
           textAlign: "center",
           position: "relative",
-          zIndex: 0,
         }}
       >
-        <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]">
+        <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
             <Image
               src="/assets/fire-dynamic-premium.svg"
@@ -68,7 +67,7 @@ export const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[260px] left-[-60px] lg:left-[-130px]">
+        <div className="absolute top-[260px] left-[-60px] lg:left-[-130px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]">
             <Image
               src="/assets/gift-dynamic-premium.svg"
@@ -78,7 +77,7 @@ export const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[140px] right-[-60px] lg:right-[-180px]">
+        <div className="absolute top-[140px] right-[-60px] lg:right-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
             <Image
               src="/assets/rocket-dynamic-premium.svg"
@@ -88,7 +87,7 @@ export const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[260px] right-[-60px] lg:right-[-130px]">
+        <div className="absolute top-[260px] right-[-60px] lg:right-[-130px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] ">
             <Image
               src="/assets/money-bag-dynamic-premium.svg"
@@ -99,7 +98,7 @@ export const HeroSection = () => {
           </div>
         </div>
         <h1
-          className="text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk"
+          className="text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk z-10"
           style={{
             backgroundImage:
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
