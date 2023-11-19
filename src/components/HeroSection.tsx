@@ -54,10 +54,52 @@ export const HeroSection = () => {
           maxWidth: "48rem",
           marginInline: "auto",
           textAlign: "center",
+          position: "relative",
+          zIndex: 0,
         }}
       >
+        <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]">
+          <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
+            <Image
+              src="/assets/fire-dynamic-premium.svg"
+              alt=""
+              fill
+              className=""
+            />
+          </div>
+        </div>
+        <div className="absolute top-[260px] left-[-60px] lg:left-[-130px]">
+          <div className="relative w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]">
+            <Image
+              src="/assets/gift-dynamic-premium.svg"
+              alt=""
+              fill
+              className="blur-[1px]"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[140px] right-[-60px] lg:right-[-180px]">
+          <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
+            <Image
+              src="/assets/rocket-dynamic-premium.svg"
+              alt=""
+              fill
+              className=""
+            />
+          </div>
+        </div>
+        <div className="absolute top-[260px] right-[-60px] lg:right-[-130px]">
+          <div className="relative w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] ">
+            <Image
+              src="/assets/money-bag-dynamic-premium.svg"
+              alt=""
+              fill
+              className="blur-[2px]"
+            />
+          </div>
+        </div>
         <h1
-          className="text-[40px] font-semibold text-[#f6f6f6] image-text"
+          className="text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk"
           style={{
             backgroundImage:
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
@@ -66,7 +108,7 @@ export const HeroSection = () => {
           Design <span className="text-[#FF4800]">→ </span> Code. Create.
           Repeat. Crafting Digital Brilliance, Simplified.
         </h1>
-        <p className="text-[16px] text-[#f6f6f6] pt-[24px]">
+        <p className="text-[16px] text-[#f6f6f6] pt-[24px] z-10">
           Join the innovation journey! Subscribe to my newsletter for a
           front-row seat to the latest in code, design, and creativity.
         </p>

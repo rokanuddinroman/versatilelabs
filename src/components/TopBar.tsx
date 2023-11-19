@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const TopBar = () => {
@@ -5,22 +6,22 @@ export const TopBar = () => {
     <div className="wrapper">
       <div className="marquee">
         <div className="h-[50px] bg-[#E73521] text-[#131317] flex items-center">
-          <strong className="text-lg font-bold">
+          <Link href="" className="text-lg font-bold">
             Get this template \ Get this template \ Get this template \ Get this
             template \ Get this template \ Get this template \
-          </strong>
-          <strong className="text-lg font-bold">
+          </Link>
+          <Link href="" className="text-lg font-bold">
             Get this template \ Get this template \ Get this template \ Get this
             template \ Get this template \ Get this template \
-          </strong>
-          <strong className="text-lg font-bold">
+          </Link>
+          <Link href="" className="text-lg font-bold">
             Get this template \ Get this template \ Get this template \ Get this
             template \ Get this template \ Get this template \
-          </strong>
-          <strong className="text-lg font-bold">
+          </Link>
+          <Link href="" className="text-lg font-bold">
             Get this template \ Get this template \ Get this template \ Get this
             template \ Get this template \ Get this template \
-          </strong>
+          </Link>
         </div>
       </div>
     </div>
