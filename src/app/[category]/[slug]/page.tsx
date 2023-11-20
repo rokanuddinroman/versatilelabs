@@ -19,53 +19,53 @@ import React, { useEffect, useRef, useState } from "react";
 function ProductPage() {
   const pathname = usePathname();
   const category = pathname.split("/")[1];
-  // const controls = useAnimation();
+  const controls = useAnimation();
 
-  // const handleScroll = () => {
-  //   const scrollY = window.scrollY;
-  //   const limitedTiltValue = scrollY >= 40 ? 40 : scrollY;
-  //   controls.start({
-  //     transform: `perspective(1000px) rotateX(${
-  //       40 - limitedTiltValue
-  //     }deg) rotateY(0deg)`,
-  //   });
-  // };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const limitedTiltValue = scrollY >= 40 ? 40 : scrollY;
+    controls.start({
+      transform: `perspective(1000px) rotateX(${
+        40 - limitedTiltValue
+      }deg) rotateY(0deg)`,
+    });
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
-  // const [blurScrollY, setBlurScrollY] = useState(0);
-  // useEffect(() => {
-  //   const handleBlurScroll = () => {
-  //     setBlurScrollY(window.scrollY);
-  //   };
+  const [blurScrollY, setBlurScrollY] = useState(0);
+  useEffect(() => {
+    const handleBlurScroll = () => {
+      setBlurScrollY(window.scrollY);
+    };
 
-  //   window.addEventListener("scroll", handleBlurScroll);
+    window.addEventListener("scroll", handleBlurScroll);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleBlurScroll);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", handleBlurScroll);
+    };
+  }, []);
 
-  // const blurValue = blurScrollY >= 200 ? 2 : 0;
+  const blurValue = blurScrollY >= 200 ? 2 : 0;
 
-  // const ref = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["start start", "end start"],
-  // });
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
-  // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  // const textY = useTransform(scrollYProgress, [0, 1], ["0%", "380%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "380%"]);
   return (
     <div>
       <TopBar />
       <Navbar />
 
-      {/* <div
+      <div
         ref={ref}
         className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative pt-[150px] overflow-hidden hidden lg:block"
       >
@@ -97,7 +97,7 @@ function ProductPage() {
           <p className="text-center mx-auto text-[18px] w-[800px] text-gray-500">
             Elevate your online presence with this Framer template – a versatile
             Linktree alternative designed for streamlined organization of links,
-            projects, products, and more."
+            projects, products, and more.
           </p>
           <div className="flex items-center justify-center gap-2 mt-10">
             <Link href="https://www.buymeacoffee.com/rokanuddin/e/173543">
@@ -172,7 +172,7 @@ function ProductPage() {
             />
           </motion.div>
         </div>
-      </div> */}
+      </div>
       <div
         className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative 
         grid-cols-1 lg:grid-cols-[1fr,450px] pb-8 pt-14 hidden lg:grid"
