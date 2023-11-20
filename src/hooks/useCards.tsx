@@ -10,7 +10,7 @@ const ALLCARDS = [
   {
     category: "Templates",
     title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
+    image: "https://i.ibb.co/6s9nFJp/ICjhn571u-G7m-De-F5-LMwid-ZVmmg.jpg",
     slug: "linkup-linktree-alternative-2",
     isFree: true,
     price: "49",

@@ -9,10 +9,10 @@ const WorkPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="max-w-screen-xl mx-auto border-x border-[#363636] pb-[100px] relative">
+      <div className="max-w-screen-xl mx-auto border-x border-[#363636] pb-[100px] relative holds-the-iframe">
         <iframe
-          data-tally-src="https://tally.so/embed/3NXMgp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="eager"
+          data-tally-src="https://tally.so/embed/3NXMgp?alignLeft=1&hideTitle=1&dynamicHeight=1"
+          loading="lazy"
           width="100%"
           height="100"
           frameBorder="0"

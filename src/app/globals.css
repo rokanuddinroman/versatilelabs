@@ -166,6 +166,11 @@ body {
   height: "2000px";
 } */
 
+.holds-the-iframe {
+  background: url(https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif)
+    center center no-repeat;
+}
+
 .image-text {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -202,6 +207,11 @@ body {
   filter: blur(250px);
   pointer-events: none; */
 }
+
+.card-page-thumbnail {
+  transform: perspective(1000px) rotateX(40deg) rotateY(0deg);
+}
+
 .iosRounded {
   clip-path: polygon(
     100% 50%,
