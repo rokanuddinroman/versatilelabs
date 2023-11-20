@@ -35,23 +35,23 @@ function ProductPage() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
-  const [scrollY, setScrollY] = useState(0);
+  const [blurScrollY, setBlurScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const handleBlurScroll = () => {
+      setBlurScrollY(window.scrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleBlurScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleBlurScroll);
     };
   }, []);
 
-  const blurValue = scrollY >= 200 ? 2 : 0;
+  const blurValue = blurScrollY >= 200 ? 2 : 0;
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
