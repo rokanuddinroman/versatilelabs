@@ -35,10 +35,9 @@ function ProductPage() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll]);
+  }, []);
 
   const [blurScrollY, setBlurScrollY] = useState(0);
-
   useEffect(() => {
     const handleBlurScroll = () => {
       setBlurScrollY(window.scrollY);
