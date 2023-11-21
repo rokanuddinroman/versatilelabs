@@ -270,7 +270,7 @@ function ProductPage() {
             }}
           >
             <Image
-              src="https://i.ibb.co/6s9nFJp/ICjhn571u-G7m-De-F5-LMwid-ZVmmg.jpg"
+              src="https://i.ibb.co/ZSvRm9W/image.png"
               alt=""
               fill={true}
               style={{ objectFit: "cover", borderRadius: "8px" }}
