@@ -7,6 +7,7 @@ import {
   TwitterLogo,
   YoutubeLogo,
 } from "@phosphor-icons/react";
+import { Layout } from "./ui/layout";
 
 const Footer = () => {
   let bangladeshTime = new Date().toLocaleTimeString("en-US", {
@@ -17,7 +18,7 @@ const Footer = () => {
   });
   return (
     <div className="bg-[#E73521] text-[#131317]">
-      <div className="max-w-screen-xl mx-auto p-4 px-[16px] border-x border-[#131317] flex justify-between items-start flex-col md:flex-row md:items-center">
+      <Layout className="p-4 flex justify-between items-start flex-col md:flex-row md:items-center">
         <p style={{ fontSize: "120px" }}>{bangladeshTime}</p>
         <div className="flex flex-col">
           <Link href="">Home</Link>
@@ -25,9 +26,9 @@ const Footer = () => {
           <Link href="">Blogs</Link>
           <Link href="">Work</Link>
         </div>
-      </div>
+      </Layout>
       <div className="h-[80px] border-t border-[#131317]">
-        <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#131317] h-[100%] flex items-center justify-between">
+        <Layout className="h-[100%] flex items-center justify-between">
           <p>Made by Rokan | ©2023 Rokan.tech</p>
           <div className="flex items-center gap-2">
             <Link href="#">
@@ -43,7 +44,7 @@ const Footer = () => {
               <InstagramLogo size={24} color="#131317" weight="fill" />
             </Link>
           </div>
-        </div>
+        </Layout>
       </div>
     </div>
   );

@@ -46,25 +46,11 @@ export const HeroSection = () => {
 
   const { toast } = useToast();
   return (
-    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-[100px] relative overflow-hidden">
-      <div className="hero-light-effect"></div>
-      <div
-        style={{
-          paddingTop: "112px",
-          maxWidth: "48rem",
-          marginInline: "auto",
-          textAlign: "center",
-          position: "relative",
-        }}
-      >
+    <div className="px-[16px] relative overflow-hidden pb-[120px]">
+      <div className="pt-[112px] max-w-[48rem] mx-auto text-center relative">
         <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
-            <Image
-              src="/assets/fire-dynamic-premium.svg"
-              alt=""
-              fill
-              className=""
-            />
+            <Image src="/assets/fire-dynamic-premium.svg" alt="" fill />
           </div>
         </div>
         <div className="absolute top-[260px] left-[-60px] lg:left-[-130px]  z-[-1]">
@@ -79,12 +65,7 @@ export const HeroSection = () => {
         </div>
         <div className="absolute top-[140px] right-[-60px] lg:right-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
-            <Image
-              src="/assets/rocket-dynamic-premium.svg"
-              alt=""
-              fill
-              className=""
-            />
+            <Image src="/assets/rocket-dynamic-premium.svg" alt="" fill />
           </div>
         </div>
         <div className="absolute top-[260px] right-[-60px] lg:right-[-130px]  z-[-1]">
@@ -104,10 +85,10 @@ export const HeroSection = () => {
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
           }}
         >
-          Design <span className="text-[#FF4800]">→ </span> Code. Create.
-          Repeat. Crafting Digital Brilliance, Simplified.
+          Design → Code. Create. Repeat. Crafting Digital Brilliance,
+          Simplified.
         </h1>
-        <p className="text-[16px] text-[#f6f6f6] pt-[24px] z-10">
+        <p className="text-[16px] text-[#f6f6f6aa] pt-[24px] z-10">
           Join the innovation journey! Subscribe to my newsletter for a
           front-row seat to the latest in code, design, and creativity.
         </p>

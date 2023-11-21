@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { TopBar } from "@/components/TopBar";
 import { Button } from "@/components/ui/button";
+import { Layout } from "@/components/ui/layout";
 import {
   ArrowElbowUpLeft,
   ArrowLeft,
@@ -65,9 +66,9 @@ function ProductPage() {
       <TopBar />
       <Navbar />
 
-      <div
+      <Layout
         ref={ref}
-        className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative pt-[150px] overflow-hidden hidden lg:block"
+        className="relative pt-[150px] overflow-hidden hidden lg:block"
       >
         <motion.div
           style={{
@@ -168,13 +169,14 @@ function ProductPage() {
               src="https://i.ibb.co/ZSvRm9W/image.png"
               alt=""
               fill={true}
+              loading="lazy"
               style={{ objectFit: "cover", borderRadius: "8px" }}
             />
           </motion.div>
         </div>
-      </div>
-      <div
-        className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative 
+      </Layout>
+      <Layout
+        className="relative 
         grid-cols-1 lg:grid-cols-[1fr,450px] pb-8 pt-14 hidden lg:grid"
       >
         <div className="lg:pr-4">
@@ -223,9 +225,9 @@ function ProductPage() {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
       {/* Mobile Below */}
-      <div className="max-w-screen-xl mx-auto px-[16px] border-x border-b border-[#363636] block lg:hidden">
+      <Layout className="border-b border-[#363636] block lg:hidden">
         <Link
           href={`/${category}`}
           className="inline-flex items-center gap-1 h-[60px]"
@@ -233,9 +235,9 @@ function ProductPage() {
           <ArrowElbowUpLeft size={20} color="#ffffff" weight="bold" />
           <p>{category}</p>
         </Link>
-      </div>
-      <div
-        className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative  grid lg:hidden 
+      </Layout>
+      <Layout
+        className="relative  grid lg:hidden 
         grid-cols-1 lg:grid-cols-[450px,1fr] pb-8"
       >
         <div className="lg:border-r border-[#363636] py-4 lg:pr-4 lg:sticky top-0">
@@ -275,7 +277,7 @@ function ProductPage() {
             />
           </div>
         </div>
-      </div>
+      </Layout>
 
       <Footer />
       <Dock />

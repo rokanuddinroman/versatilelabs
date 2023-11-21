@@ -7,14 +7,23 @@ import { Dock } from "@/components/Dock";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { useEffect } from "react";
+import { SocialSection } from "@/components/SocialSection";
+import { Layout } from "@/components/ui/layout";
 
 export default function Home() {
   return (
     <main className="relative">
       <TopBar />
       <Navbar />
-      <HeroSection />
-      <MyCards />
+
+      <Layout className="px-0">
+        <HeroSection />
+      </Layout>
+
+      <Layout>
+        <MyCards />
+        <SocialSection />
+      </Layout>
       <Footer />
       <Toaster />
       <Dock />

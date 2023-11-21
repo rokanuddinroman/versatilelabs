@@ -48,6 +48,7 @@ export const Dock = () => {
           alignItems: "center",
           justifyContent: "center",
           pointerEvents: "none",
+          zIndex: "999",
         }}
       >
         <div

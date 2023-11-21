@@ -20,7 +20,7 @@ export function MyCards() {
   const [selectedTab, setSelectedTab] = useState("Templates");
   const haha = ALLCARDS.filter((category) => category.category === selectedTab);
   return (
-    <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] pb-8">
+    <div className="pb-8">
       <Tabs defaultValue="Templates" className="w-full">
         <TabsList className="flex items-center gap-4">
           {uniqueCategories?.map((card) => (
