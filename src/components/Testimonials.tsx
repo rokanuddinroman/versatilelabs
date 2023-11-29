@@ -14,7 +14,8 @@ export const Testimonials = () => {
         />
         <p className="text-[#929292] text-[16px] my-2">@rokanuddin</p>
         <h2 className="text-[40px] font-[600] leading-[48px] my-6">
-          "Linkup is a better Linktree alternative that helped my coversion 2x"
+          &quot;Linkup is a better Linktree alternative that helped my coversion
+          2x&quot;
         </h2>
         <p className="text-[#929292] mt-4 lg:mt-12">
           People are loving my templates, here are some comment
