@@ -21,25 +21,25 @@ const Footer = () => {
       <Layout className="p-4 flex justify-between items-start flex-col md:flex-row md:items-center">
         <p style={{ fontSize: "120px" }}>{bangladeshTime}</p>
         <div className="flex flex-col">
-          <Link href="" className="underline">
+          <Link href="/" className="underline">
             <span>Home</span>
             <svg viewBox="0 0 13 20">
               <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
             </svg>
           </Link>
-          <Link href="" className="underline">
+          <Link href="/templates" className="underline">
             <span>Templates</span>
             <svg viewBox="0 0 13 20">
               <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
             </svg>
           </Link>
-          <Link href="" className="underline">
+          <Link href="/blogs" className="underline">
             <span>Blogs</span>
             <svg viewBox="0 0 13 20">
               <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
             </svg>
           </Link>
-          <Link href="" className="underline">
+          <Link href="/work" className="underline">
             <span>Work</span>
             <svg viewBox="0 0 13 20">
               <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />

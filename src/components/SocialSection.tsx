@@ -7,9 +7,9 @@ import Link from "next/link";
 export const SocialSection = () => {
   return (
     <div className="relative pb-[00px]">
-      <div className="overflow-hidden flex flex-col justify-center items-center rounded-[30px] pt-[40px]">
+      <div className="overflow-hidden flex flex-col justify-center items-center rounded-[30px] pt-[00px]">
         <h1
-          className="text-[20px] max-w-[768px] md:text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk z-10 pb-2 text-center px-4"
+          className="text-[30px] max-w-[768px] md:text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk z-10 pb-2 text-center px-4"
           style={{
             backgroundImage:
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",

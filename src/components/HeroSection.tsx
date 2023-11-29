@@ -110,9 +110,6 @@ export const HeroSection = () => {
           <Button
             type="submit"
             className="w-full h-[40px] md:w-[184px] rounded-[4px] text-[14px] font-[500]"
-            onClick={() => {
-              // successMessage &&
-            }}
           >
             Subscribe for 0$
           </Button>

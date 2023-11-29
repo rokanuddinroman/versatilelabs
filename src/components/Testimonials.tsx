@@ -3,7 +3,7 @@ import React from "react";
 
 export const Testimonials = () => {
   return (
-    <div className="py-[120px] grid grid-cols-2 gap-4">
+    <div className="py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4">
       <div>
         <Image
           src="/assets/pfp.jpg"
@@ -14,9 +14,9 @@ export const Testimonials = () => {
         />
         <p className="text-[#929292] text-[16px] my-2">@rokanuddin</p>
         <h2 className="text-[40px] font-[600] leading-[48px] my-6">
-          Linkup is a better Linktree alternative that helped my coversion 2x
+          "Linkup is a better Linktree alternative that helped my coversion 2x"
         </h2>
-        <p className="text-[#929292] mt-12">
+        <p className="text-[#929292] mt-4 lg:mt-12">
           People are loving my templates, here are some comment
         </p>
         <button className="bg-[#E73621] rounded-full h-[40px] px-6 text-[#020202] font-[500] mt-6">
@@ -49,8 +49,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry.
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
@@ -80,8 +80,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry.
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
@@ -111,8 +111,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry.
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
