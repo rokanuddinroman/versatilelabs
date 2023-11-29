@@ -49,8 +49,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry.
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
@@ -80,8 +80,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry.
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
@@ -111,8 +111,8 @@ export const Testimonials = () => {
             </div>
             <p className="text-[#D5D5D5]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry.
             </p>
             <p className="text-[#929292] text-[14px] mt-2">@rokanuddin</p>
           </div>
