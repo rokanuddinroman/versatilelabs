@@ -13,7 +13,6 @@ export const HeroSection = () => {
   const [successMessage, setSuccessMessage] =
     useState<MembersSuccessResponse>();
   const [errorMessage, setErrorMessage] = useState("");
-  const [isMember, setIsMember] = useState("");
 
   const handleEmailSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,18 +24,21 @@ export const HeroSection = () => {
     });
     const data = await res.json();
 
-    setIsMember(data?.res?.title);
-
-    console.log(data.error);
-
     if (data.error) {
-      setErrorMessage("Hey, you are already subscribed!");
-      setSuccessMessage(undefined);
+      if ((data.error.title = "Member Exists")) {
+        toast({
+          title: "Umm! 🥳",
+          description: "You are already subscribed!",
+        });
+      }
       return;
     }
-
-    setSuccessMessage(data.res);
-    setErrorMessage("");
+    if (data.res) {
+      toast({
+        title: "Yay! 🥳",
+        description: `You ${data.res.email_address} is subscribed now. thanks!`,
+      });
+    }
   };
 
   const dismissMessages = () => {
@@ -46,7 +48,7 @@ export const HeroSection = () => {
 
   const { toast } = useToast();
   return (
-    <div className="px-[16px] relative overflow-hidden pb-[120px]">
+    <div className="px-[16px] relative overflow-hidden pt-[30px] pb-[150px] bg-[url('/assets/grid.svg')] bg-no-repeat bg-center">
       <div className="pt-[112px] max-w-[48rem] mx-auto text-center relative">
         <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
@@ -110,14 +112,6 @@ export const HeroSection = () => {
             className="w-full h-[40px] md:w-[184px] rounded-[4px] text-[14px] font-[500]"
             onClick={() => {
               // successMessage &&
-              toast({
-                title: "Yay! 🥳",
-                description: successMessage
-                  ? `We have added ${successMessage.email_address} to our waitlist. We will let you know when we launch!`
-                  : "You are already added to our waitlist. We will let you know when we launch!",
-              });
-
-              setSuccessMessage(undefined);
             }}
           >
             Subscribe for 0$

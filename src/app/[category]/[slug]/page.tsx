@@ -79,7 +79,7 @@ function ProductPage() {
         >
           <div className="flex justify-center pb-2">
             <Link
-              className="px-4 bg-[#161616] rounded-full border border-[#5757574d] text-[14px] leading-6 flex items-center gap-1 text-[#5C626E]"
+              className="px-4 rounded-full border border-[#5757574d] text-[14px] leading-6 flex items-center gap-1 text-[#5C626E]"
               href="/templates"
             >
               <ArrowLeft weight="bold" color="rgb(107 114 128)" size={14} />
@@ -151,12 +151,7 @@ function ProductPage() {
             </div>
           </div>
         </motion.div>
-        <div
-          className="mt-14"
-          style={{
-            backgroundColor: "#161616",
-          }}
-        >
+        <div className="mt-14">
           <motion.div
             animate={controls}
             className="card-page-thumbnail"

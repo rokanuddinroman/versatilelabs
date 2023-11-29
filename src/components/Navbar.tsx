@@ -7,7 +7,7 @@ import { Layout } from "./ui/layout";
 
 export const Navbar = () => {
   return (
-    <nav className="h-[80px] border-b border-[#363636] sticky top-0 backdrop-blur-[20px] bg-[#161616be] z-[999]">
+    <nav className="h-[80px] border-b border-[#3636368c] sticky top-0 backdrop-blur-[20px] bg-[#020202be] z-[990]">
       <Layout className="h-[80px] flex justify-between items-center px-4">
         <Link href="/">
           <div className="flex items-center gap-2">

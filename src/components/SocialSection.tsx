@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export const SocialSection = () => {
   return (
-    <div className="relative pb-[120px]">
-      <div className="overflow-hidden flex flex-col justify-center items-center bg-[#1A1A1A] rounded-[30px] pt-[40px]">
+    <div className="relative pb-[00px]">
+      <div className="overflow-hidden flex flex-col justify-center items-center rounded-[30px] pt-[40px]">
         <h1
-          className="text-[20px] md:text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk z-10 pb-2 text-center px-4"
+          className="text-[20px] max-w-[768px] md:text-[35px] lg:text-[45px] font-semibold text-[#f6f6f6] image-text grotesk z-10 pb-2 text-center px-4"
           style={{
             backgroundImage:
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
@@ -18,9 +18,8 @@ export const SocialSection = () => {
           Master development and design with this essential guide.
         </h1>
         <p className="pb-8 text-[#6b7280] text-[14px] md:text-[18px] max-w-[48rem] text-center px-4">
-          Master the art of creating cool user interfaces with quick tips and
-          tricks to boost your efficiency. 🚀 Unlock the secrets to engaging and
-          impressive designs! 🎨💡
+          Master the art of creating cool ui with quick tips and tricks to boost
+          your efficiency.
         </p>
         <Link
           className="mb-10"

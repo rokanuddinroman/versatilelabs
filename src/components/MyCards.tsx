@@ -44,7 +44,9 @@ export function MyCards() {
             ).map((card) => (
               <div
                 key={card.title}
-                className="bg-[#1A1A1A] border border-[#242424] rounded-[8px]"
+                className="
+                bg-[#a1a1a112]
+                 border border-[#242424a6] rounded-[8px]"
               >
                 <Link href={`/${card.category}/${card.slug}`}>
                   <div
@@ -69,7 +71,7 @@ export function MyCards() {
                     {card.title}
                   </p>
                 </div>
-                <div className="p-4 border-t border-[#363636] flex items-center justify-between">
+                <div className="p-4 border-t border-[#242424fe] flex items-center justify-between">
                   <div className="flex items-center">
                     <p
                       className={`text-[20px] font-[700] ${
