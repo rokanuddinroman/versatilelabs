@@ -24,19 +24,19 @@ function CategoryPage() {
 
   return (
     <div
-      className="flex justify-between flex-col"
+      className="flex justify-between flex-col "
       style={{ minHeight: "100vh" }}
     >
       <div>
         <TopBar />
         <Navbar />
-        <Layout className="border-b border-[#363636] ">
+        <Layout className="border-b border-x border-[#3636368c] ">
           <Link href="/" className="inline-flex items-center gap-1 h-[60px]">
             <ArrowElbowUpLeft size={20} color="#ffffff" weight="bold" />
             <p>Home</p>
           </Link>
         </Layout>
-        <Layout className="relative py-4 pb-[50px]">
+        <Layout className="relative py-4 pb-[50px] border-x border-b border-[#3636368c] ">
           <div className="flex gap-2 mb-4">
             <h2 className="text-[36px] capitalize">{pathname.slice(1)}</h2>
             <p className="text-[12px] text-gray-400">

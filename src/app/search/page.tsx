@@ -29,13 +29,13 @@ function CategoryPage() {
       <div>
         <TopBar />
         <Navbar />
-        <div className="max-w-screen-xl mx-auto px-[16px] border-x border-b border-[#363636] ">
+        <div className="max-w-screen-xl mx-auto px-[16px] border-x border-b border-[#3636368c] ">
           <Link href="/" className="inline-flex items-center gap-1 h-[60px]">
             <ArrowElbowUpLeft size={20} color="#ffffff" weight="bold" />
             <p>Home</p>
           </Link>
         </div>
-        <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#363636] relative py-4 pb-[50px]">
+        <div className="max-w-screen-xl mx-auto px-[16px] border-x border-[#3636368c] relative py-4 pb-[50px]">
           <div className="flex gap-2 mb-4">
             <h2 className="text-[36px]">Search for {search}</h2>
             <p className="text-[12px] text-gray-400">
@@ -72,7 +72,7 @@ function CategoryPage() {
                       {card.title}
                     </p>
                   </div>
-                  <div className="p-4 border-t border-[#363636] flex items-center justify-between">
+                  <div className="p-4 border-t border-[#3636368c] flex items-center justify-between">
                     <div className="flex items-center">
                       <p
                         className={`text-[20px] font-[700] ${

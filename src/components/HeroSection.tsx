@@ -7,8 +7,10 @@ import { useToast } from "./ui/use-toast";
 import { ToastAction } from "./ui/toast";
 import { MembersSuccessResponse } from "@/app/types/Newsletter";
 import Confetti from "react-confetti";
+import useData from "@/hooks/useData";
 
 export const HeroSection = () => {
+  const { HeroSectionData } = useData();
   const [email, setEmail] = useState("");
   const [successMessage, setSuccessMessage] =
     useState<MembersSuccessResponse>();
@@ -48,8 +50,8 @@ export const HeroSection = () => {
 
   const { toast } = useToast();
   return (
-    <div className="px-[16px] relative overflow-hidden pt-[30px] pb-[150px] bg-[url('/assets/grid.svg')] bg-no-repeat bg-center">
-      <div className="pt-[112px] max-w-[48rem] mx-auto text-center relative">
+    <div className="px-[16px] relative overflow-hidden pt-[30px] pb-[95px] md:pb-[150px] bg-[url('/assets/grid.svg')] bg-no-repeat bg-center">
+      <div className="pt-[60px] lg:pt-[112px] max-w-[48rem] mx-auto text-center relative">
         <div className="absolute top-[110px] left-[-60px] lg:left-[-180px]  z-[-1]">
           <div className="relative w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
             <Image src="/assets/fire-dynamic-premium.svg" alt="" fill />
@@ -87,12 +89,10 @@ export const HeroSection = () => {
               "linear-gradient(0deg, rgb(143, 151, 168) 0%, rgb(255, 255, 255) 100%)",
           }}
         >
-          Design → Code. Create. Repeat. Crafting Digital Brilliance,
-          Simplified.
+          {HeroSectionData.Heading}
         </h1>
         <p className="text-[16px] text-[#f6f6f6aa] pt-[24px] z-10">
-          Join the innovation journey! Subscribe to my newsletter for a
-          front-row seat to the latest in code, design, and creativity.
+          {HeroSectionData.Paragraph}
         </p>
         <form
           onSubmit={handleEmailSubmit}
@@ -100,7 +100,7 @@ export const HeroSection = () => {
         >
           <Input
             className="w-full md:w-[432px]"
-            placeholder="your email"
+            placeholder={HeroSectionData.InputText}
             type="email"
             required
             autoCapitalize="off"
@@ -111,7 +111,7 @@ export const HeroSection = () => {
             type="submit"
             className="w-full h-[40px] md:w-[184px] rounded-[4px] text-[14px] font-[500]"
           >
-            Subscribe for 0$
+            {HeroSectionData.ButtonText}
           </Button>
         </form>
       </div>

@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { SearchDialog } from "./SearchDialog";
 import "../app/shine.css";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Dock = () => {
   const [open, setOpen] = React.useState(false);
@@ -36,6 +36,7 @@ export const Dock = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  const pathname = usePathname();
   return (
     <div>
       <div
@@ -85,7 +86,7 @@ export const Dock = () => {
                 size={40}
                 color="#ffffff"
                 weight="duotone"
-                style={{ opacity: "0.4" }}
+                style={{ opacity: pathname === "/" ? 0.4 : 0.2 }}
               />
             </div>
           </Link>
@@ -131,7 +132,7 @@ export const Dock = () => {
                 size={40}
                 color="#ffffff"
                 weight="duotone"
-                style={{ opacity: "0.2" }}
+                style={{ opacity: pathname === "/blogs" ? 0.4 : 0.2 }}
               />
             </div>
           </Link>
@@ -154,7 +155,7 @@ export const Dock = () => {
                 size={40}
                 color="#ffffff"
                 weight="duotone"
-                style={{ opacity: "0.2" }}
+                style={{ opacity: pathname === "/work" ? 0.4 : 0.2 }}
               />
             </div>
           </Link>

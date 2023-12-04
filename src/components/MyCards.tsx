@@ -6,19 +6,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export function MyCards() {
+interface CursorFunctions {
+  setCursorText: (text: string) => void;
+  setCursorVariant: (variant: string) => void;
+}
+
+export function MyCards({ setCursorText, setCursorVariant }: CursorFunctions) {
   const { myCards } = useCards();
   const ALLCARDS = myCards;
-
   const allCategories = ALLCARDS.map((card) => card.category);
-
   function onlyUnique(value: any, index: any, array: string | any[]) {
     return array.indexOf(value) === index;
   }
-
   const uniqueCategories = allCategories.filter(onlyUnique);
   const [selectedTab, setSelectedTab] = useState("Templates");
-  const haha = ALLCARDS.filter((category) => category.category === selectedTab);
+
+  // -------------- For Cursors --------------
+  function projectEnter() {
+    setCursorText("View");
+    setCursorVariant("project");
+  }
+
+  function projectLeave() {
+    setCursorText("");
+    setCursorVariant("default");
+  }
   return (
     <div className="pb-8">
       <Tabs defaultValue="Templates" className="w-full">
@@ -54,6 +66,9 @@ export function MyCards() {
                       aspectRatio: "4/3",
                       position: "relative",
                     }}
+                    className="project"
+                    onMouseEnter={projectEnter}
+                    onMouseLeave={projectLeave}
                   >
                     <Image
                       src={card.image}
@@ -88,7 +103,11 @@ export function MyCards() {
                     href={`/${card.category}/${card.slug}`}
                     className="flex items-center"
                   >
-                    <p className="text-[12px] font-[600] pr-[6px]">
+                    <p
+                      className="text-[12px] font-[600] pr-[6px] project"
+                      onMouseEnter={projectEnter}
+                      onMouseLeave={projectLeave}
+                    >
                       View Product
                     </p>
                     <ArrowRight size={16} color="#ffffff" weight="bold" />
@@ -101,8 +120,10 @@ export function MyCards() {
 
         <div className="flex justify-center mt-8">
           <Link
+            onMouseEnter={projectEnter}
+            onMouseLeave={projectLeave}
             href={`/${selectedTab.toLowerCase()}`}
-            className="font-[500] border-b-2 border-white flex text-center pb-1 gap-1 items-center"
+            className="project font-[500] border-b-2 border-white flex text-center pb-1 gap-1 items-center"
           >
             View all {selectedTab}
             <ArrowUpRight size={20} color="#ffffff" weight="bold" />

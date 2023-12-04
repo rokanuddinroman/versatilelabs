@@ -35,7 +35,6 @@ export function SearchDialog({
   const router = useRouter();
   const searchParams = useSearchParams();
   const search = searchParams.get("q");
-  console.log(search);
   React.useEffect(() => {
     setOpen(false);
   }, [search]);

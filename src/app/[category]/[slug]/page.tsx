@@ -161,7 +161,7 @@ function ProductPage() {
             }}
           >
             <Image
-              src="https://i.ibb.co/ZSvRm9W/image.png"
+              src="https://i.ibb.co/fMHwwTT/Mac-Book-Pro-16.png"
               alt=""
               fill={true}
               loading="lazy"
@@ -178,9 +178,23 @@ function ProductPage() {
           <h2 className="text-[36px] font-[700] leading-[42px] text-[#ededed] py-2">
             Overview
           </h2>
+          <div className="relative aspect-video mb-4">
+            <Image
+              src="https://i.ibb.co/TbhrsTv/Slide-16-9-7.png"
+              fill
+              alt=""
+            />
+          </div>
+          <div className="relative aspect-video mb-4">
+            <Image
+              src="https://i.ibb.co/TbhrsTv/Slide-16-9-7.png"
+              fill
+              alt=""
+            />
+          </div>
         </div>
         <div className="lg:pl-4">
-          <div className=" lg:pr-4 lg:sticky top-0">
+          <div className=" lg:pr-4 lg:sticky top-[80px]">
             <h2 className="text-[36px] font-[700] leading-[42px] text-[#ededed] py-2">
               Features
             </h2>
@@ -218,11 +232,17 @@ function ProductPage() {
                 <p className="text-[14px] text-[#888888]">Portfolio, SaaS</p>
               </div>
             </div>
+            <div className="grid grid-cols-2 gap-2 mt-8">
+              <Button variant="styled">Get the template</Button>
+              <Button variant="outline">Live Preview</Button>
+            </div>
           </div>
         </div>
       </Layout>
-      {/* Mobile Below */}
-      <Layout className="border-b border-[#363636] block lg:hidden">
+
+      {/* --------------- Mobile Below --------------- */}
+
+      <Layout className="border-b border-[#5757574d] block lg:hidden">
         <Link
           href={`/${category}`}
           className="inline-flex items-center gap-1 h-[60px]"

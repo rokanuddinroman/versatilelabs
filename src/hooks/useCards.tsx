@@ -3,7 +3,7 @@ const ALLCARDS = [
     category: "Templates",
     title: "Linkup v1.0 - Linktree Alternative",
     slug: "linkup-linktree-alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
+    image: "https://i.ibb.co/bd3Tr2M/Slide-16-9-6.png",
     isFree: false,
     price: "49",
   },
@@ -18,7 +18,7 @@ const ALLCARDS = [
   {
     category: "Templates",
     title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
+    image: "https://i.ibb.co/bd3Tr2M/Slide-16-9-6.png",
     slug: "linkup-linktree-alternative-3",
     isFree: false,
     price: "49",
@@ -26,7 +26,7 @@ const ALLCARDS = [
   {
     category: "Products",
     title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
+    image: "https://i.ibb.co/bd3Tr2M/Slide-16-9-6.png",
     slug: "linkup-linktree-alternative-4",
     isFree: true,
     price: "49",
@@ -34,7 +34,7 @@ const ALLCARDS = [
   {
     category: "Resources",
     title: "Linkup v1.0 - Linktree Alternative",
-    image: "https://i.ibb.co/9T94XHt/image.png",
+    image: "https://i.ibb.co/bd3Tr2M/Slide-16-9-6.png",
     slug: "linkup-linktree-alternative-5",
     isFree: false,
     price: "49",
