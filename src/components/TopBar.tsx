@@ -7,7 +7,7 @@ export const TopBar = () => {
   return (
     <div className="wrapper">
       <div className="marquee">
-        <div className="h-[50px] bg-[#E73521] text-[#131317] flex items-center">
+        <div className="h-[50px] bg-[#56D806] text-[#131317] flex items-center">
           <Link href={TopbarData.URL} className="text-lg font-bold">
             {TopbarData.text} \ {TopbarData.text} \ {TopbarData.text} \{" "}
             {TopbarData.text} \ {TopbarData.text} \ {TopbarData.text} \

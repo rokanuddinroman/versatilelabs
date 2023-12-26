@@ -3,13 +3,14 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "@phosphor-icons/react";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -19,10 +20,11 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         styled:
-          "bg-[#E73521] text-[#131317] hover:bg-[#ac2516] font-[500] h-12",
+          "bg-[#56D806] text-[#131317] hover:bg-[#ac2516] font-[500] h-12",
       },
       size: {
-        default: "h-10 px-4 py-2 rounded-[4px]",
+        default:
+          "px-[24px] rounded-[100px] text-[18px] font-[500] h-[50px] md:h-[58px] styled-button",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
@@ -45,11 +47,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
+      <div className="flex items-center justify-center styled-button-wrapper cursor-pointer mr-[-58px]">
+        <div className="rounded-[100px] bg-[#56D806] h-[50px] w-[50px] md:h-[58px] md:w-[58px] grid place-items-center styled-button-icon-left">
+          <ArrowUpRight size={18} color="#000" weight="bold" />
+        </div>
+        <Comp
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref}
+          {...props}
+        />
+        <div className="rounded-[100px] bg-[#56D806] h-[50px] w-[50px] md:h-[58px] md:w-[58px] grid place-items-center styled-button-icon">
+          <ArrowUpRight size={18} color="#000" weight="bold" />
+        </div>
+      </div>
     );
   }
 );

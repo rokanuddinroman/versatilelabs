@@ -19,7 +19,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --styled: #e73521;
+    --styled: #56d806;
     --styled-foreground: #ac2516;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -50,7 +50,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --styled: #e73521;
+    --styled: #56D806;
     --styled-foreground: #ac2516;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -645,4 +645,41 @@ body {
   --stroke-duration: 0.3s;
   --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
   --stroke-delay: 0.195s;
+}
+
+.styled-button-wrapper .styled-button,
+.styled-button-wrapper .styled-button-icon,
+.styled-button-wrapper .styled-button-icon-left {
+  transform-style: preserve-3d;
+  transition: all 0.2s;
+}
+
+.styled-button-wrapper:hover .styled-button {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.styled-button-wrapper:hover .styled-button-icon {
+  transform: translate3d(-58px, 0px, 0px) scale3d(0, 0, 0) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.styled-button-wrapper:hover .styled-button-icon-left {
+  transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 0deg);
+}
+
+.styled-button {
+  transform: translate3d(-58px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.styled-button-icon {
+  transform: translate3d(-58px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.styled-button-icon-left {
+  transform: scale3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 0deg);
 }

@@ -102,7 +102,7 @@ function ProductPage() {
           </p>
           <div className="flex items-center justify-center gap-2 mt-10">
             <Link href="https://www.buymeacoffee.com/rokanuddin/e/173543">
-              <Button variant="styled">
+              <Button className="bg-[#56D806]">
                 Get the template
                 <ArrowRight size={18} className="ml-1" weight="bold" />
               </Button>

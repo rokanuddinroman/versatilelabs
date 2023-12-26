@@ -19,7 +19,7 @@ const Footer = () => {
   });
   const { FooterSectionData } = useData();
   return (
-    <div className="bg-[#E73521] text-[#131317]">
+    <div className="bg-[#56D806] text-[#131317]">
       <Layout className="p-4 flex justify-between items-start flex-col md:flex-row md:items-center">
         <p style={{ fontSize: "120px" }}>{bangladeshTime}</p>
         <div className="flex flex-col">

@@ -10,14 +10,13 @@ const Topbar = {
   URL: "",
 };
 const Navbar = {
-  LogoText: "Rokan Tech",
-  LogoImage: "/assets/pfp.jpg",
+  LogoText: "Versatile Labs",
+  LogoImage: "/Versatile.png",
 };
 const HeroSection = {
-  Heading:
-    "Design → Code. Create. Repeat. Crafting Digital Brilliance, Simplified.",
+  Heading: "We build premium websites and mobile apps at varsatile Labs",
   Paragraph:
-    "Join the innovation journey! Subscribe to my newsletter for a front-row seat to the latest in code, design, and creativity.",
+    "Experience digital excellence with Versatile Labs—your source for premium websites, apps, and software solutions.",
   ButtonText: "Subscribe for 0$",
   InputText: "your email",
 };

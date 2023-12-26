@@ -76,7 +76,7 @@ function CategoryPage() {
                     <div className="flex items-center">
                       <p
                         className={`text-[20px] font-[700] ${
-                          card.isFree && "text-[#E73621]"
+                          card.isFree && "text-[#56D806]"
                         }`}
                       >
                         {card.isFree ? "Free" : card.price}

@@ -53,7 +53,6 @@ export default function Home() {
     },
     project: {
       opacity: 1,
-      // backgroundColor: "rgba(255, 255, 255, 0.6)",
       backgroundColor: "#fff",
       color: "#000",
       height: 80,
@@ -242,7 +241,6 @@ export default function Home() {
           setCursorVariant={setCursorVariant}
         />
         <Testimonials />
-        <SocialSection />
       </Layout>
       <Footer />
       <Toaster />

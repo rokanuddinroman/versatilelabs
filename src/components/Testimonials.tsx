@@ -31,7 +31,7 @@ export const Testimonials = () => {
           People are loving my templates, here are some comment
         </p>
         {/* ----------Update Button Text here---------- */}
-        <button className="bg-[#E73621] rounded-full h-[40px] px-6 text-[#020202] font-[500] mt-6">
+        <button className="bg-[#56D806] rounded-full h-[40px] px-6 text-[#020202] font-[500] mt-6">
           Get Linkup -&gt;
         </button>
       </div>
